@@ -3,6 +3,7 @@
 ## What is this mod?
 
 MCVM Client is a **Fabric** mod that adds a few quality of life features to Minecraft.
+
 Requires Fabric API to function.
 
 ## Features
