@@ -50,7 +50,7 @@ public class McvmClient implements ClientModInitializer {
 				"Zoom button",
 				InputUtil.Type.KEYSYM,
 				GLFW.GLFW_KEY_C,
-				"McVMClient"
+				"MCVM Client"
 		));
 
 		ClientTickEvents.END_CLIENT_TICK.register(client -> {
