@@ -9,6 +9,6 @@ The mod's setting page is accessed by a button on the controls setting page in y
 
 - Zoom (Make sure to bind the keybind for this in your settings)
    - Adjustable zoom FOV (Defaults to 25)
-   - Scroll while zooming to change zoom FOV (Defaults to enabled)
+   - Scroll while zooming to change zoom FOV (Enabled by default)
    - Toggle or Hold zoom modes (Defaults to Hold)
 - Lock FOV, prevents events like sprinting from modifying your FOV (Disabled by default)
