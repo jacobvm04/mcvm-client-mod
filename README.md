@@ -1,9 +1,14 @@
-# Fabric Example Mod
+# MCVM Client
 
-## Setup
+## What is this mod?
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+MCVM Client is a mod that adds a few quality of life features to Minecraft.
 
-## License
+## Features
+The mod's setting page is accessed by a button on the controls setting page in your game.
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+- Zoom (Make sure to bind the keybind for this in your settings)
+   - Adjustable zoom FOV (Defaults to 25)
+   - Scroll while zooming to change zoom FOV (Defaults to enabled)
+   - Toggle or Hold zoom modes (Defaults to Hold)
+- Lock FOV, prevents events like sprinting from modifying your FOV (Disabled by default)
