@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "mcvmclient",
+  "version": "${version}",
+
+  "name": "McVM Client",
+  "description": "",
+  "authors": [
+    "Jacob Van Meter"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/jacobvm04/mcvm-client"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/mcvmclient/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "net.fabricmc.example.McvmClient"
+    ]
+  },
+  "mixins": [
+    "mcvmclient.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.18.x",
+    "java": ">=17"
+  }
+}
