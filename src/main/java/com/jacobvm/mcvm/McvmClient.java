@@ -38,7 +38,7 @@ public class McvmClient implements ClientModInitializer {
 		zoomToggled = new Config.BooleanConfigOption("zoomToggled", false);
 		fovLocked = new Config.BooleanConfigOption("fovLocked", false);
 		zoomScrollEnabled = new Config.BooleanConfigOption("zoomScrollEnabled", true);
-		controlsPageEnabled = new Config.BooleanConfigOption("controlsPageEnabled", true);
+		controlsPageEnabled = new Config.BooleanConfigOption("controlsPageEnabled", false);
 
 		config.CreateOption(zoomFov);
 		config.CreateOption(zoomToggled);
