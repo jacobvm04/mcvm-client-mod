@@ -2,24 +2,27 @@
   "schemaVersion": 1,
   "id": "mcvmclient",
   "version": "${version}",
-
-  "name": "McVM Client",
-  "description": "",
+  "name": "MCVM Client",
+  "description": "A Client Sided Fabric mod that adds zoom, lock FOV, and other Quality of Life improvements.",
   "authors": [
     "Jacob Van Meter"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/jacobvm04/mcvm-client"
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/mcvm-client",
+    "sources": "https://github.com/jacobvm04/mcvm-client-mod",
+    "issues": "https://github.com/jacobvm04/mcvm-client-mod/issues"
   },
 
-  "license": "CC0-1.0",
+  "license": "GPLv3",
   "icon": "assets/mcvmclient/icon.png",
 
-  "environment": "*",
+  "environment": "client",
   "entrypoints": {
+    "modmenu": [
+      "com.jacobvm.mcvm.McvmModMenuApi"
+    ],
     "client": [
-      "net.fabricmc.example.McvmClient"
+      "com.jacobvm.mcvm.McvmClient"
     ]
   },
   "mixins": [
@@ -30,6 +33,7 @@
     "fabricloader": ">=0.11.3",
     "fabric": "*",
     "minecraft": "1.18.x",
+    "modmenu": ">=3.0.1",
     "java": ">=17"
   }
 }

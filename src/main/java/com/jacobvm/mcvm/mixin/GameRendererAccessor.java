@@ -1,4 +1,4 @@
-package net.fabricmc.example.mixin;
+package com.jacobvm.mcvm.mixin;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.GameRenderer;

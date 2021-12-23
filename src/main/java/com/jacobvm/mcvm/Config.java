@@ -1,4 +1,4 @@
-package net.fabricmc.example;
+package com.jacobvm.mcvm;
 
 import net.fabricmc.loader.api.FabricLoader;
 import org.apache.logging.log4j.Logger;

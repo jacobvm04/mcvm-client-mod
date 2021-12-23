@@ -1,6 +1,6 @@
-package net.fabricmc.example.mixin;
+package com.jacobvm.mcvm.mixin;
 
-import net.fabricmc.example.McvmOptionsScreen;
+import com.jacobvm.mcvm.McvmOptionsScreen;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.option.ControlsOptionsScreen;
 import net.minecraft.client.gui.widget.ButtonWidget;
@@ -23,6 +23,6 @@ public abstract class OptionsMixin extends Screen {
         int k = this.height / 6 - 12;
         int j = i + 160;
 
-        this.addDrawableChild(new ButtonWidget(i, k + 48 + 24, 150, 20, new TranslatableText("MCVM Client Settings"), button -> this.client.setScreen(new McvmOptionsScreen(this, ((GameOptionsAccessor)this).getGameOptions()))));
+        this.addDrawableChild(new ButtonWidget(i, k + 48 + 24, 150, 20, new TranslatableText("MCVM Client Settings"), button -> this.client.setScreen(new McvmOptionsScreen(this))));
     }
 }

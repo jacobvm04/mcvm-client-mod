@@ -1,17 +1,17 @@
-package net.fabricmc.example;
+package com.jacobvm.mcvm;
 
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.ScreenTexts;
 import net.minecraft.client.gui.screen.option.ControlsOptionsScreen;
 import net.minecraft.client.gui.screen.option.GameOptionsScreen;
 import net.minecraft.client.gui.widget.ButtonWidget;
-import net.minecraft.client.option.GameOptions;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.text.TranslatableText;
 
 public class McvmOptionsScreen extends GameOptionsScreen {
-    public McvmOptionsScreen(Screen parent, GameOptions options) {
-        super(parent, options, new TranslatableText("MCVM Settings"));
+    public McvmOptionsScreen(Screen parent) {
+        super(parent, MinecraftClient.getInstance().options, new TranslatableText("MCVM Settings"));
     }
 
     @Override
