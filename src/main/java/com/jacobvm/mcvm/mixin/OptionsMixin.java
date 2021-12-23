@@ -1,5 +1,6 @@
 package com.jacobvm.mcvm.mixin;
 
+import com.jacobvm.mcvm.McvmClient;
 import com.jacobvm.mcvm.McvmOptionsScreen;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.option.ControlsOptionsScreen;
@@ -19,10 +20,11 @@ public abstract class OptionsMixin extends Screen {
 
     @Inject(at = @At("TAIL"), method = "init")
     private void createOptions(CallbackInfo ci) {
-        int i = this.width / 2 - 155;
-        int k = this.height / 6 - 12;
-        int j = i + 160;
+        if (McvmClient.controlsPageEnabled.getOption()) {
+            int i = this.width / 2 - 155;
+            int k = this.height / 6 - 12;
 
-        this.addDrawableChild(new ButtonWidget(i, k + 48 + 24, 150, 20, new TranslatableText("MCVM Client Settings"), button -> this.client.setScreen(new McvmOptionsScreen(this))));
+            this.addDrawableChild(new ButtonWidget(i, k + 48 + 24, 150, 20, new TranslatableText("MCVM Client Settings"), button -> this.client.setScreen(new McvmOptionsScreen(this))));
+        }
     }
 }

@@ -5,8 +5,8 @@
   "compatibilityLevel": "JAVA_16",
   "client": [
     "FovMixin",
-    "GameOptionsAccessor",
     "OptionInvoker",
+    "OptionsMixin",
     "GameRendererAccessor",
     "MouseScrollMixin"
   ],

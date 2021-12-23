@@ -4,10 +4,12 @@
 
 MCVM Client is a **Fabric** mod that adds a few quality of life features to Minecraft.
 
-Requires Fabric API to function.
+Requires Fabric API (above version 0.11.3) and modmenu (above version 3.0.0) to function.
 
 ## Features
-The mod's setting page is accessed by a button on the controls setting page in your game.
+The mod's setting page can be accessed through either the configuration button for the mod in mod menu
+or through a button on the controls setting page for easy access during gameplay if "Control page" is enabled in the mod settings
+(Enabled by default).
 
 - Zoom (Make sure to bind the keybind for this in your settings)
    - Adjustable zoom FOV (Defaults to 25)

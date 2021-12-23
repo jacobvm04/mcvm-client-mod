@@ -25,6 +25,7 @@ public class McvmOptionsScreen extends GameOptionsScreen {
         this.addDrawableChild(McvmClient.zoomFovOption.createButton(this.gameOptions, j, k, 150));
         this.addDrawableChild(McvmClient.zoomScrollEnabledOption.createButton(this.gameOptions, i, k + 24, 150));
         this.addDrawableChild(McvmClient.fovLockedOption.createButton(this.gameOptions, j, k + 24, 150));
+        this.addDrawableChild(McvmClient.controlsPageEnabledOption.createButton(this.gameOptions, i, k + 24 + 24, 150));
 
         this.addDrawableChild(new ButtonWidget(this.width / 2 - 100, this.height - 29, 200, 20, ScreenTexts.DONE, button -> this.client.setScreen(this.parent)));
     }

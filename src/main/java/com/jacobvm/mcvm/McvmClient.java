@@ -25,6 +25,8 @@ public class McvmClient implements ClientModInitializer {
 	public static DoubleOption zoomFovOption;
 	public static Config.BooleanConfigOption zoomScrollEnabled;
 	public static CyclingOption<Boolean> zoomScrollEnabledOption;
+	public static Config.BooleanConfigOption controlsPageEnabled;
+	public static CyclingOption<Boolean> controlsPageEnabledOption;
 
 	public static Config.BooleanConfigOption fovLocked;
 	public static CyclingOption<Boolean> fovLockedOption;
@@ -36,11 +38,13 @@ public class McvmClient implements ClientModInitializer {
 		zoomToggled = new Config.BooleanConfigOption("zoomToggled", false);
 		fovLocked = new Config.BooleanConfigOption("fovLocked", false);
 		zoomScrollEnabled = new Config.BooleanConfigOption("zoomScrollEnabled", true);
+		controlsPageEnabled = new Config.BooleanConfigOption("controlsPageEnabled", true);
 
 		config.CreateOption(zoomFov);
 		config.CreateOption(zoomToggled);
 		config.CreateOption(fovLocked);
 		config.CreateOption(zoomScrollEnabled);
+		config.CreateOption(controlsPageEnabled);
 
 		config.load();
 	}
@@ -102,6 +106,15 @@ public class McvmClient implements ClientModInitializer {
 				gameOptions -> fovLocked.getOption(),
 				((gameOptions, option, value) -> {
 					fovLocked.setOption(value);
+					config.save();
+				}));
+
+		controlsPageEnabledOption = CyclingOption.create("Control page",
+				new TranslatableText("Enabled"),
+				new TranslatableText("Disabled"),
+				gameOptions -> controlsPageEnabled.getOption(),
+				((gameOptions, option, value) -> {
+					controlsPageEnabled.setOption(value);
 					config.save();
 				}));
 	}
